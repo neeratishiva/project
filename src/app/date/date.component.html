@@ -1,0 +1,82 @@
+
+<h1>Daily </h1>
+ <div class="container">
+    <div class="row">
+        <div class="col-10">
+            <div class="jumbotron">
+                <form name="form" [formGroup]="form">
+                    <div class="form-group">
+                    <label>Starting Date:</label>
+                    <input type="date" class="form-control" formControlName="m_start"  (change)="dailyDue($event)" /><br/>
+                    </div>
+                    <div class="form-group">
+                    <label>Due-Date:</label>
+                    <input type="text" class="form-control" formControlName="m_end" [(ngModel)]="d_dueDate"/><br/>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+ </div>
+<hr>
+<h1>Weekly Due</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <div class="jumbotron">
+                <form name="form" [formGroup]="form">
+                    <div class="form-group">
+                        <label>Starting Date:</label>
+                        <input type="date"  class="form-control" formControlName="w_start"  (change)="weeklyDue($event)" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Due-Date:</label>
+                        <input type="text"  class="form-control" formControlName="w_end" [(ngModel)]="w_dueDate"/><br/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+<h1>Monthly Due</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <div class="jumbotron">
+<form name="form" [formGroup]="form">
+    <div class="form-group">
+    <label>Starting Date:</label>
+    <input type="date" class="form-control" formControlName="d_start"  (change)="monthlyDue($event)" /><br/>
+    </div>
+    <div class="form-group">
+    <label>Due-Date:</label>
+    <input type="text" class="form-control" formControlName="d_end" [(ngModel)]="m_dueDate"/><br/>
+    </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h1>Yearly Due</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <div class="jumbotron">
+<form name="form" [formGroup]="form">
+    <div class="form-group">
+    <label>Starting Date:</label>
+    <input type="date" class="form-control" formControlName="y_start"  (change)="yearlyDue($event)" /><br/>
+</div>
+<div class="form-group">
+    <label>Due-Date:</label>
+    <input type="text" class="form-control" formControlName="y_end" [(ngModel)]="y_dueDate"/><br/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<hr/>
